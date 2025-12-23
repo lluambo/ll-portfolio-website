@@ -1,19 +1,8 @@
-@import 'tailwindcss';
-
-html {
-    scroll-behavior: smooth;
+@import "tailwindcss";
+@plugin "daisyui" {
+    themes: cupcake;
 }
-
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6,
-.poppins{
-    font-family: 'Poppins', sans-serif;
+@import "@fontsource/poppins";
+body {
+    font-family: "Poppins", sans-serif;
 }
