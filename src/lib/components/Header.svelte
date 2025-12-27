@@ -52,7 +52,7 @@
                 </div>
                 <ul
                     tabindex="-1"
-                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-gray-900 border border-white/10 rounded-box w-52 text-white"
+                    class="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow-lg bg-gray-900 border border-white/10 rounded-box w-52 text-white"
                 >
                     {#each links as link}
                         <li><a href={link.href}>{link.name}</a></li>

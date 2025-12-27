@@ -4,6 +4,12 @@
 
     const experience = [
         {
+            company: "LogicGate",
+            period: "2022 - Present",
+            role: "Frontend Developer III",
+            desc: "Leading feature development on a team analyzing requirements, designing solutions, and assisting in evolving the frontend chapter.",
+        },
+        {
             company: "Cognizant",
             period: "2019 - 2021",
             role: "Senior Fullstack Developer",
@@ -14,6 +20,12 @@
             period: "2017 - 2019",
             role: "Web Developer",
             desc: "Built bespoke websites for local businesses using modern web technologies and CMS solutions.",
+        },
+        {
+            company: "Tech Solutions Inc.",
+            period: "2015 - 2017",
+            role: "Junior Developer",
+            desc: "Assisted in developing internal tools and client projects, gaining experience in both frontend and backend technologies.",
         },
     ];
 
@@ -59,7 +71,7 @@
         ></div>
 
         <div
-            class="absolute left-4 md:left-1/2 top-2 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] origin-top"
+            class="absolute left-4 md:left-1/2 top-2 w-0.5 bg-linear-to-b from-cyan-400 to-purple-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] origin-top"
             style="height: {$progress * 100}%;"
         ></div>
 

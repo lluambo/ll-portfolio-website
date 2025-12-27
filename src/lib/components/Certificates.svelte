@@ -9,8 +9,13 @@
             date: "2023",
             logo: "☁️",
             image: "https://placehold.co/800x600/png?text=AWS+Certificate",
-            learned:
-                "Cloud architecture, IAM security, Scalable systems, VPC networking.",
+            // ✅ CHANGE 1: Data is now an array [] instead of a long string
+            learned: [
+                "Cloud architecture",
+                "IAM security",
+                "Scalable systems",
+                "VPC networking",
+            ],
         },
         {
             title: "Meta Frontend Developer",
@@ -18,8 +23,13 @@
             date: "2022",
             logo: "∞",
             image: "https://placehold.co/800x600/png?text=Meta+Certificate",
-            learned:
-                "Advanced React, UI/UX principles, Version control, API integration.",
+            // ✅ CHANGE 1: Data is now an array
+            learned: [
+                "Advanced React",
+                "UI/UX principles",
+                "Version control",
+                "API integration",
+            ],
         },
         {
             title: "Google UX Design",
@@ -27,17 +37,13 @@
             date: "2021",
             logo: "G",
             image: "https://placehold.co/800x600/png?text=Google+Certificate",
-            learned:
-                "Wireframing, Prototyping in Figma, User research, Accessibility standards.",
-        },
-        {
-            title: "Google UX Design",
-            issuer: "Google",
-            date: "2021",
-            logo: "G",
-            image: "https://placehold.co/800x600/png?text=Google+Certificate",
-            learned:
-                "Wireframing, Prototyping in Figma, User research, Accessibility standards.",
+            // ✅ CHANGE 1: Data is now an array
+            learned: [
+                "Wireframing",
+                "Prototyping in Figma",
+                "User research",
+                "Accessibility standards",
+            ],
         },
     ];
 
@@ -105,13 +111,20 @@
 
                 <div class="w-full pt-4 border-t border-white/5 mt-auto">
                     <p
-                        class="text-xs font-bold text-cyan-500 mb-1 uppercase tracking-wide"
+                        class="text-xs font-bold text-cyan-500 mb-3 uppercase tracking-wide"
                     >
                         Key Skills:
                     </p>
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        {cert.learned}
-                    </p>
+
+                    <div class="flex flex-wrap gap-2">
+                        {#each cert.learned as skill}
+                            <span
+                                class="badge badge-outline border-purple-500/50 text-purple-200 hover:bg-purple-500/20 transition-colors"
+                            >
+                                {skill}
+                            </span>
+                        {/each}
+                    </div>
                 </div>
             </button>
         {/each}
@@ -154,7 +167,6 @@
 </div>
 
 <style>
-    /* Simple zoom animation for modal */
     @keyframes scale-in {
         from {
             opacity: 0;

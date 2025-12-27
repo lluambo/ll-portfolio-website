@@ -1,26 +1,27 @@
 <script lang="ts">
     import Header from "$lib/components/Header.svelte";
     import Footer from "$lib/components/Footer.svelte";
-    import Me2 from "$lib/assets/Me2.png";
+    import Pic from "$lib/assets/landingPictures/landing_pic.png";
+    import PersonalPortfolio from "$lib/assets/projects/personal-portfolio.png";
 
     //Navigation Links
     const navLinks = [
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
-        { name: "Projects", href: "#projects" },
-        { name: "Contact", href: "#contact" },
+        { name: "Projects", href: "/#projects" },
+        { name: "Contact", href: "/contact" },
     ];
 
     // Projects Data
     const projects = [
         {
-            slug: "project-alpha",
-            name: "Project Alpha",
+            slug: "Personal-Portfolio",
+            name: "Personal Portfolio",
             tag: "SvelteKit",
-            img: "https://picsum.photos/400/250?random=1",
-            desc: "A full-stack e-commerce dashboard.",
+            img: PersonalPortfolio,
+            desc: "A personal portfolio website built with SvelteKit and Tailwind CSS.",
         },
-        {
+        /*  {
             slug: "beta-app",
             name: "Beta App",
             tag: "Mobile",
@@ -33,7 +34,8 @@
             tag: "Dashboard",
             img: "https://picsum.photos/400/250?random=3",
             desc: "Real-time crypto analytics platform.",
-        },
+            },*/
+        //uncomment above projects when adding more projects
     ];
 </script>
 
@@ -63,17 +65,20 @@
                 <h1
                     class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight drop-shadow-2xl"
                 >
-                    Hi, I'm <span
-                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400"
+                    Yoh, I'm <span
+                        class="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-400"
                         >Lucas Luambo</span
                     >
                 </h1>
 
                 <p
-                    class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light"
+                    class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light prose-strong:text-cyan-300"
                 >
-                    A creative developer crafting digital experiences that merge
-                    high-performance code with stunning visual design.
+                    Im a passionate developer who loves building amazing digital
+                    experiences. Currently, I'm focused on making responsive web
+                    applications using <strong>Svelte</strong> as my frontend
+                    and
+                    <strong>SvelteKit</strong> as my backend.
                 </p>
 
                 <div
@@ -96,10 +101,10 @@
 
             <div class="relative order-1 lg:order-2 flex justify-center">
                 <div
-                    class="absolute inset-0 bg-gradient-to-tr from-cyan-500/30 to-purple-500/30 blur-[80px] rounded-full w-3/4 h-3/4 m-auto -z-10"
+                    class="absolute inset-0 bg-linear-to-tr from-cyan-500/30 to-purple-500/30 blur-[80px] rounded-full w-3/4 h-3/4 m-auto -z-10"
                 ></div>
                 <img
-                    src={Me2}
+                    src={Pic}
                     alt="Developer Portrait"
                     class="relative z-10 w-full max-w-md object-contain mask mask-squircle lg:mask-none drop-shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:scale-105 transition-transform duration-500"
                 />
@@ -115,10 +120,13 @@
                 <h2
                     class="text-3xl font-bold text-white flex items-center gap-3"
                 >
-                    <span class="text-cyan-400">01.</span> Selected Projects
+                    Some of my<span
+                        class="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-400"
+                        >Projects</span
+                    >
                 </h2>
                 <a
-                    href="#"
+                    href="https://github.com/lluambo"
                     class="link link-hover text-sm text-cyan-300 hover:text-cyan-200"
                     >View Github -></a
                 >
