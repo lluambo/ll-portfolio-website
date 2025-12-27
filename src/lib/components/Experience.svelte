@@ -1,31 +1,33 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import { spring } from "svelte/motion";
+    import Pic from "$lib/assets/landingPictures/backup_landing_pic.png"; // Make sure this matches your file name
 
     const experience = [
         {
-            company: "LogicGate",
-            period: "2022 - Present",
-            role: "Frontend Developer III",
-            desc: "Leading feature development on a team analyzing requirements, designing solutions, and assisting in evolving the frontend chapter.",
+            company: "GlobalLogic",
+            period: "Sep 2024 - Present",
+            role: "Project Support Specialist",
+            // Using HTML strings for the bullet points
+            desc: `
+                <ul class="list-disc list-inside space-y-2 mt-2">
+                    <li>Served as <strong class="text-white">stream coordinator</strong> and client liaison, maintaining <span class="text-cyan-400 font-bold">90%+ quality standards</span>.</li>
+                    <li>Represented team in <strong class="text-white">Monthly Business Reviews</strong> with stakeholders.</li>
+                    <li>Deployed <strong class="text-white">productivity tools</strong> that significantly enhanced team efficiency.</li>
+                </ul>
+            `,
         },
         {
-            company: "Cognizant",
-            period: "2019 - 2021",
-            role: "Senior Fullstack Developer",
-            desc: "Designed and developed full-stack RESTful microservices using Netflix OSS, Java Spring Boot, SQL, Angular, and React.",
-        },
-        {
-            company: "Freelance",
-            period: "2017 - 2019",
-            role: "Web Developer",
-            desc: "Built bespoke websites for local businesses using modern web technologies and CMS solutions.",
-        },
-        {
-            company: "Tech Solutions Inc.",
-            period: "2015 - 2017",
-            role: "Junior Developer",
-            desc: "Assisted in developing internal tools and client projects, gaining experience in both frontend and backend technologies.",
+            company: "GlobalLogic",
+            period: "Aug 2022 - Sep 2024",
+            role: "Junior Project Support Specialist",
+            desc: `
+                <ul class="list-disc list-inside space-y-2 mt-2">
+                    <li>Maintained a <span class="text-cyan-400 font-bold">95% quality rating</span> in ticket resolution processes.</li>
+                    <li>Selected as <strong class="text-white">early adopter</strong> for new client technology platforms.</li>
+                    <li>Conducted <strong class="text-white">QA reviews</strong> and mentored team members on operational efficiency.</li>
+                </ul>
+            `,
         },
     ];
 
@@ -38,8 +40,6 @@
         const viewportHeight = window.innerHeight;
 
         // Calculate progress based on where the top of the timeline is relative to the viewport center
-        // When top of timeline hits center of screen = 0%
-        // When bottom of timeline hits center of screen = 100%
         const targetY = viewportHeight / 2;
         const dist = targetY - rect.top;
         const height = rect.height;
@@ -71,7 +71,7 @@
         ></div>
 
         <div
-            class="absolute left-4 md:left-1/2 top-2 w-0.5 bg-linear-to-b from-cyan-400 to-purple-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] origin-top"
+            class="absolute left-4 md:left-1/2 top-2 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] origin-top"
             style="height: {$progress * 100}%;"
         ></div>
 
@@ -88,7 +88,7 @@
                     class="w-12 h-12 rounded-full border-4 border-black bg-black ring-2 ring-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.6)] overflow-hidden"
                 >
                     <img
-                        src="https://placehold.co/100x100/png?text=Me"
+                        src={Pic}
                         alt="avatar"
                         class="w-full h-full object-cover"
                     />
@@ -121,9 +121,10 @@
                             <h4 class="text-lg text-cyan-300 mb-2 font-medium">
                                 {job.role}
                             </h4>
-                            <p class="text-gray-400 text-sm leading-relaxed">
-                                {job.desc}
-                            </p>
+
+                            <div class="text-gray-400 text-sm leading-relaxed">
+                                {@html job.desc}
+                            </div>
                         </div>
                     </div>
 

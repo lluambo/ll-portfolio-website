@@ -26,14 +26,14 @@
             name: "Beta App",
             tag: "Mobile",
             img: "https://picsum.photos/400/250?random=2",
-            desc: "React Native fitness tracking application.",
+            desc: "test description for beta app.",
         },
         {
             slug: "gamma-dash",
             name: "Gamma Dash",
             tag: "Dashboard",
             img: "https://picsum.photos/400/250?random=3",
-            desc: "Real-time crypto analytics platform.",
+            desc: "test description for gamma dash.",
             },*/
         //uncomment above projects when adding more projects
     ];

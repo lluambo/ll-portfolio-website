@@ -1,49 +1,86 @@
 <script lang="ts">
+    // 1. Import your certificate images here
+    import CertProgFund from "$lib/assets/Certificates/programming-foundations.jpg";
+    import CertCareerSoft from "$lib/assets/Certificates/career-essentials-software.jpg";
+    import CertEthicsAI from "$lib/assets/Certificates/ethics-generative-ai.jpg";
+    import CertPython from "$lib/assets/Certificates/intermediate-python.jpg";
+    import CertProgBeyond from "$lib/assets/Certificates/programming-beyond.jpg";
+    import CertLinuxCmd from "$lib/assets/Certificates/linux-command-line.jpg";
+    import CertRedHat from "$lib/assets/Certificates/red-hat-linux.jpg";
+    import CertIntroCareer from "$lib/assets/Certificates/intro-career-skills.jpg";
+
     // State for the modal
     let selectedCert: { title: string; image: string } | null = $state(null);
 
+    // 2. Data populated from your uploaded documents
     const certs = [
         {
-            title: "AWS Certified Solutions Architect",
-            issuer: "Amazon Web Services",
-            date: "2023",
-            logo: "☁️",
-            image: "https://placehold.co/800x600/png?text=AWS+Certificate",
-            // ✅ CHANGE 1: Data is now an array [] instead of a long string
+            title: "Career Essentials in Software Development",
+            issuer: "Microsoft & LinkedIn",
+            date: "Jun 2024",
+            logo: "💻",
+            image: CertCareerSoft,
             learned: [
-                "Cloud architecture",
-                "IAM security",
-                "Scalable systems",
-                "VPC networking",
+                "Software Development",
+                "Career Management",
+                "Tech Career Skills",
             ],
         },
         {
-            title: "Meta Frontend Developer",
-            issuer: "Meta",
-            date: "2022",
-            logo: "∞",
-            image: "https://placehold.co/800x600/png?text=Meta+Certificate",
-            // ✅ CHANGE 1: Data is now an array
-            learned: [
-                "Advanced React",
-                "UI/UX principles",
-                "Version control",
-                "API integration",
-            ],
+            title: "Red Hat Enterprise Linux 8 Essential Training",
+            issuer: "Red Hat",
+            date: "Sep 2024",
+            logo: "🎩",
+            image: CertRedHat,
+            learned: ["RHEL 8", "System Administration", "Open Source"],
         },
         {
-            title: "Google UX Design",
-            issuer: "Google",
-            date: "2021",
-            logo: "G",
-            image: "https://placehold.co/800x600/png?text=Google+Certificate",
-            // ✅ CHANGE 1: Data is now an array
-            learned: [
-                "Wireframing",
-                "Prototyping in Figma",
-                "User research",
-                "Accessibility standards",
-            ],
+            title: "Learning Linux Command Line",
+            issuer: "LinkedIn Learning",
+            date: "Sep 2024",
+            logo: "🐧",
+            image: CertLinuxCmd,
+            learned: ["Bash CLI", "System Admin", "File Systems"],
+        },
+        {
+            title: "Intermediate Python for Non-Programmers",
+            issuer: "LinkedIn Learning",
+            date: "Oct 2024",
+            logo: "🐍",
+            image: CertPython,
+            learned: ["Python", "Data Structures", "Scripting"],
+        },
+        {
+            title: "Ethics in the Age of Generative AI",
+            issuer: "PMI & LinkedIn",
+            date: "Oct 2023",
+            logo: "🤖",
+            image: CertEthicsAI,
+            learned: ["Generative AI", "Computer Ethics", "AI Safety"],
+        },
+        {
+            title: "Programming Foundations: Fundamentals",
+            issuer: "LinkedIn Learning",
+            date: "Jun 2024",
+            logo: "🏗️",
+            image: CertProgFund,
+            learned: ["Core Programming", "Logic", "Algorithmic Thinking"],
+        },
+        {
+            title: "Programming Foundations: Beyond Fundamentals",
+            issuer: "LinkedIn Learning",
+            date: "Jun 2024",
+            logo: "🚀",
+            image: CertProgBeyond,
+            learned: ["Advanced Syntax", "Collections", "Debugging"],
+        },
+        {
+            title: "Introduction to Career Skills in Software",
+            issuer: "LinkedIn Learning",
+            date: "May 2024",
+            logo: "💼",
+            image: CertIntroCareer,
+            learned: ["Industry Overview", "Career Planning", "Dev Lifecycle"],
         },
     ];
 
@@ -62,36 +99,34 @@
     </h2>
 
     <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4"
     >
         {#each certs as cert}
             <button
                 onclick={() => openModal(cert)}
                 class="card bg-black/40 backdrop-blur-md border border-white/10 p-6 flex flex-col text-left gap-4 hover:bg-white/5 hover:border-cyan-500/30 transition-all duration-300 group h-full"
             >
-                <div class="flex flex-row items-center gap-4 w-full">
+                <div class="flex flex-row items-start gap-4 w-full">
                     <div
-                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner flex-shrink-0"
+                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner flex-shrink-0 mt-1"
                     >
                         {cert.logo}
                     </div>
 
                     <div class="flex-1 min-w-0">
                         <h3
-                            class="text-white font-bold truncate group-hover:text-cyan-300 transition-colors"
+                            class="text-white font-bold leading-tight group-hover:text-cyan-300 transition-colors"
                         >
                             {cert.title}
                         </h3>
-                        <p class="text-sm text-gray-400 truncate">
-                            {cert.issuer}
-                        </p>
+                        <p class="text-sm text-gray-400 mt-1">{cert.issuer}</p>
                         <p class="text-xs text-gray-500 mt-1">
                             Issued {cert.date}
                         </p>
                     </div>
 
                     <div
-                        class="text-gray-600 group-hover:text-cyan-400 transition-colors"
+                        class="text-gray-600 group-hover:text-cyan-400 transition-colors mt-1"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -115,11 +150,10 @@
                     >
                         Key Skills:
                     </p>
-
                     <div class="flex flex-wrap gap-2">
                         {#each cert.learned as skill}
                             <span
-                                class="badge badge-outline border-purple-500/50 text-purple-200 hover:bg-purple-500/20 transition-colors"
+                                class="badge badge-outline border-purple-500/50 text-purple-200 hover:bg-purple-500/20 transition-colors h-auto py-1 text-left whitespace-normal"
                             >
                                 {skill}
                             </span>
