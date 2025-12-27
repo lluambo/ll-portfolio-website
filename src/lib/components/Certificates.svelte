@@ -15,6 +15,30 @@
     // 2. Data populated from your uploaded documents
     const certs = [
         {
+            title: "Intermediate Python for Non-Programmers",
+            issuer: "LinkedIn Learning",
+            date: "Oct 2024",
+            logo: "🐍",
+            image: CertPython,
+            learned: ["Python", "Data Structures", "Scripting"], // [cite: 42, 44, 47]
+        },
+        {
+            title: "Red Hat Enterprise Linux 8 Essential Training",
+            issuer: "Red Hat",
+            date: "Sep 2024",
+            logo: "🎩",
+            image: CertRedHat,
+            learned: ["RHEL 8", "System Administration", "Open Source"], // [cite: 73, 74, 76]
+        },
+        {
+            title: "Learning Linux Command Line",
+            issuer: "LinkedIn Learning",
+            date: "Sep 2024",
+            logo: "🐧",
+            image: CertLinuxCmd,
+            learned: ["Bash CLI", "System Admin", "File Systems"], // [cite: 63, 64, 67]
+        },
+        {
             title: "Career Essentials in Software Development",
             issuer: "Microsoft & LinkedIn",
             date: "Jun 2024",
@@ -24,39 +48,7 @@
                 "Software Development",
                 "Career Management",
                 "Tech Career Skills",
-            ],
-        },
-        {
-            title: "Red Hat Enterprise Linux 8 Essential Training",
-            issuer: "Red Hat",
-            date: "Sep 2024",
-            logo: "🎩",
-            image: CertRedHat,
-            learned: ["RHEL 8", "System Administration", "Open Source"],
-        },
-        {
-            title: "Learning Linux Command Line",
-            issuer: "LinkedIn Learning",
-            date: "Sep 2024",
-            logo: "🐧",
-            image: CertLinuxCmd,
-            learned: ["Bash CLI", "System Admin", "File Systems"],
-        },
-        {
-            title: "Intermediate Python for Non-Programmers",
-            issuer: "LinkedIn Learning",
-            date: "Oct 2024",
-            logo: "🐍",
-            image: CertPython,
-            learned: ["Python", "Data Structures", "Scripting"],
-        },
-        {
-            title: "Ethics in the Age of Generative AI",
-            issuer: "PMI & LinkedIn",
-            date: "Oct 2023",
-            logo: "🤖",
-            image: CertEthicsAI,
-            learned: ["Generative AI", "Computer Ethics", "AI Safety"],
+            ], // [cite: 12, 13, 16]
         },
         {
             title: "Programming Foundations: Fundamentals",
@@ -64,7 +56,7 @@
             date: "Jun 2024",
             logo: "🏗️",
             image: CertProgFund,
-            learned: ["Core Programming", "Logic", "Algorithmic Thinking"],
+            learned: ["Core Programming", "Logic", "Algorithmic Thinking"], // [cite: 2, 3, 5]
         },
         {
             title: "Programming Foundations: Beyond Fundamentals",
@@ -72,7 +64,7 @@
             date: "Jun 2024",
             logo: "🚀",
             image: CertProgBeyond,
-            learned: ["Advanced Syntax", "Collections", "Debugging"],
+            learned: ["Advanced Syntax", "Collections", "Debugging"], // [cite: 54, 55]
         },
         {
             title: "Introduction to Career Skills in Software",
@@ -80,7 +72,15 @@
             date: "May 2024",
             logo: "💼",
             image: CertIntroCareer,
-            learned: ["Industry Overview", "Career Planning", "Dev Lifecycle"],
+            learned: ["Industry Overview", "Career Planning", "Dev Lifecycle"], // [cite: 83, 84, 85]
+        },
+        {
+            title: "Ethics in the Age of Generative AI",
+            issuer: "PMI & LinkedIn",
+            date: "Oct 2023",
+            logo: "🤖",
+            image: CertEthicsAI,
+            learned: ["Generative AI", "Computer Ethics", "AI Safety"], // [cite: 23, 25, 27]
         },
     ];
 
@@ -166,14 +166,18 @@
 
     {#if selectedCert}
         <div
-            class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity"
+            class="fixed inset-0 z-100 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity"
             onclick={closeModal}
+            onkeydown={(e) => e.key === "Escape" && closeModal()}
             role="dialog"
             aria-modal="true"
+            tabindex="-1"
         >
             <div
                 class="relative max-w-4xl w-full bg-black border border-white/10 rounded-xl overflow-hidden shadow-2xl animate-scale-in"
                 onclick={(e) => e.stopPropagation()}
+                onkeydown={(e) => e.stopPropagation()}
+                role="presentation"
             >
                 <div
                     class="flex justify-between items-center p-4 border-b border-white/10 bg-white/5"
