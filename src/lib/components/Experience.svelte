@@ -71,7 +71,7 @@
         ></div>
 
         <div
-            class="absolute left-4 md:left-1/2 top-2 w-0.5 bg-gradient-to-b from-cyan-400 to-purple-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] origin-top"
+            class="absolute left-4 md:left-1/2 top-2 w-0.5 bg-linear-to-b from-cyan-400 to-purple-500 -translate-x-1/2 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.5)] origin-top"
             style="height: {$progress * 100}%;"
         ></div>
 

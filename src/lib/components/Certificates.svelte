@@ -108,7 +108,7 @@
             >
                 <div class="flex flex-row items-start gap-4 w-full">
                     <div
-                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner flex-shrink-0 mt-1"
+                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform shadow-inner shrink-0 mt-1"
                     >
                         {cert.logo}
                     </div>
