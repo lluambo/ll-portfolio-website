@@ -51,51 +51,62 @@
             class="container mx-auto px-4 z-10 grid lg:grid-cols-2 gap-12 items-center"
         >
             <div class="text-center lg:text-left order-2 lg:order-1">
-                <div class="inline-block mb-6">
-                    <div
-                        class="badge badge-lg border-cyan-500/50 bg-cyan-900/30 text-cyan-100 p-4 gap-2 backdrop-blur-sm shadow-[0_0_15px_rgba(34,211,238,0.2)]"
-                    >
-                        <span
-                            class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"
-                        ></span>
-                        Available for work
-                    </div>
-                </div>
-
-                <h1
-                    class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight drop-shadow-2xl"
-                >
-                    Yoh, I'm <span
-                        class="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-400"
-                        >Lucas Luambo</span
-                    >
-                </h1>
-
-                <p
-                    class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light prose-strong:text-cyan-300"
-                >
-                    Im a passionate developer who loves building amazing digital
-                    experiences. Currently, I'm focused on making responsive web
-                    applications using <strong>Svelte</strong> as my frontend
-                    and
-                    <strong>SvelteKit</strong> as my backend.
-                </p>
-
                 <div
-                    class="flex flex-wrap gap-4 justify-center lg:justify-start"
+                    class="text-center lg:text-left order-2 lg:order-1
+                                       bg-black/60 md:bg-transparent
+                                       backdrop-blur-md md:backdrop-blur-none
+                                       p-6 md:p-0
+                                       rounded-2xl md:rounded-none
+                                       border border-white/10 md:border-none
+                                       shadow-2xl md:shadow-none"
                 >
-                    <a
-                        href="/about"
-                        class="btn bg-cyan-500 hover:bg-cyan-400 text-black border-none btn-lg rounded-full px-8 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
+                    <div class="inline-block mb-6">
+                        <div
+                            class="badge badge-lg border-cyan-500/50 bg-cyan-900/30 text-cyan-100 p-4 gap-2 backdrop-blur-sm shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+                        >
+                            <span
+                                class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"
+                            ></span>
+                            Available for work
+                        </div>
+                    </div>
+
+                    <h1
+                        class="text-5xl md:text-7xl font-black mb-6 tracking-tight leading-tight drop-shadow-2xl"
                     >
-                        More About Me
-                    </a>
-                    <a
-                        href="#projects"
-                        class="btn btn-outline btn-lg rounded-full px-8 backdrop-blur-md bg-white/5 border-white/20 text-white hover:bg-white hover:text-black hover:border-white"
+                        Yoh, I'm <span
+                            class="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-400"
+                            >Lucas Luambo</span
+                        >
+                    </h1>
+
+                    <p
+                        class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto lg:mx-0 mb-10 leading-relaxed font-light prose-strong:text-cyan-300"
                     >
-                        View Projects
-                    </a>
+                        Im a passionate developer who loves building amazing
+                        digital experiences. Currently, I'm focused on making
+                        responsive web applications using <strong>Svelte</strong
+                        >
+                        as my frontend and
+                        <strong>SvelteKit</strong> as my backend.
+                    </p>
+
+                    <div
+                        class="flex flex-wrap gap-4 justify-center lg:justify-start"
+                    >
+                        <a
+                            href="/about"
+                            class="btn bg-cyan-500 hover:bg-cyan-400 text-black border-none btn-lg rounded-full px-8 shadow-[0_0_20px_rgba(34,211,238,0.4)]"
+                        >
+                            More About Me
+                        </a>
+                        <a
+                            href="#projects"
+                            class="btn btn-outline btn-lg rounded-full px-8 backdrop-blur-md bg-white/5 border-white/20 text-white hover:bg-white hover:text-black hover:border-white"
+                        >
+                            View Projects
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -115,7 +126,7 @@
     <section id="projects" class="py-20 px-4">
         <div class="container mx-auto max-w-5xl">
             <div
-                class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-white/10 pb-4 gap-4"
+                class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-4 bg-black/60 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-lg"
             >
                 <h2
                     class="text-3xl font-bold text-white flex items-center gap-3"
@@ -127,7 +138,7 @@
                 </h2>
                 <a
                     href="https://github.com/lluambo"
-                    class="link link-hover text-sm text-cyan-300 hover:text-cyan-200"
+                    class="btn btn-sm btn-ghost text-cyan-300 hover:text-cyan-200 hover:bg-white/10"
                     >View Github -></a
                 >
             </div>
