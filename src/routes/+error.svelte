@@ -17,7 +17,7 @@
     <Header links={navLinks} />
 
     <main
-        class="flex-grow flex flex-col items-center justify-center text-center px-4 relative overflow-hidden"
+        class="grow flex flex-col items-center justify-center text-center px-4 relative overflow-hidden"
     >
         <div
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/20 rounded-full blur-[120px] -z-10"
