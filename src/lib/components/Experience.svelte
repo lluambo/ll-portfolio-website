@@ -1,19 +1,21 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import { spring } from "svelte/motion";
-    import Pic from "$lib/assets/landingPictures/backup_landing_pic.png"; // Make sure this matches your file name
+    import Pic from "$lib/assets/landingPictures/backup_landing_pic.png";
 
     const experience = [
         {
             company: "GlobalLogic",
             period: "Sep 2024 - Present",
             role: "Project Support Specialist",
-            // Using HTML strings for the bullet points
             desc: `
-                <ul class="list-disc list-inside space-y-2 mt-2">
-                    <li>Served as <strong class="text-white">stream coordinator</strong> and client liaison, maintaining <span class="text-cyan-400 font-bold">90%+ quality standards</span>.</li>
-                    <li>Represented team in <strong class="text-white">Monthly Business Reviews</strong> with stakeholders.</li>
-                    <li>Deployed <strong class="text-white">productivity tools</strong> that significantly enhanced team efficiency.</li>
+				<p class="mb-4 text-gray-300">I coordinate operations for three language teams, managing technical setups to keep projects running smoothly and teams ready for action.</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li><strong class="text-white">Onboarded new hires</strong> by setting up workstations and leading training sessions on project tools, getting them operational from day one.</li>
+                    <li><strong class="text-white">Led three language teams</strong>, managing schedules and providing consistent feedback to ensure we hit our project delivery targets.</li>
+                    <li>Acting as the <strong class="text-white">primary liaison</strong> between our Wrocław team and global Project Managers to quickly clear up workflow blockers.</li>
+                    <li>Troubleshoot <strong class="text-white">technical issues</strong> on internal tools and communicated bugs directly to the client, leading to faster resolutions.</li>
+                    <li>Designed <strong class="text-white">process improvements</strong> by deploying new productivity tools that boosted team efficiency and helped us meet client standards.</li>
                 </ul>
             `,
         },
@@ -22,10 +24,12 @@
             period: "Aug 2022 - Sep 2024",
             role: "Junior Project Support Specialist",
             desc: `
-                <ul class="list-disc list-inside space-y-2 mt-2">
-                    <li>Maintained a <span class="text-cyan-400 font-bold">95% quality rating</span> in ticket resolution processes.</li>
-                    <li>Selected as <strong class="text-white">early adopter</strong> for new client technology platforms.</li>
-                    <li>Conducted <strong class="text-white">QA reviews</strong> and mentored team members on operational efficiency.</li>
+				<p class="mb-4 text-gray-300">I processed client tickets and supported daily team operations, maintaining high quality standards in a fast-paced environment.</p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Maintained <strong class="text-white">high quality standards</strong> by conducting regular reviews and giving feedback, helping the team sustain 80%+ quality scores.</li>
+                    <li>Facilitated <strong class="text-white">knowledge transfer</strong> by mentoring team members on new tools and processes to keep everyone efficient.</li>
+                    <li>Demonstrated <strong class="text-white">adaptability</strong> as an early adopter for a new client platform, getting certified before the rest of the team to lead the way.</li>
+                    <li>Resolved tickets with a personal <strong class="text-white">95% quality rating</strong>, consistently exceeding the standard benchmarks.</li>
                 </ul>
             `,
         },
@@ -39,15 +43,12 @@
         const rect = timelineRef.getBoundingClientRect();
         const viewportHeight = window.innerHeight;
 
-        // Calculate progress based on where the top of the timeline is relative to the viewport center
         const targetY = viewportHeight / 2;
         const dist = targetY - rect.top;
         const height = rect.height;
 
-        // Calculate percentage (0 to 1)
         let p = dist / height;
 
-        // Clamp between 0 and 1
         p = Math.max(0, Math.min(1, p));
 
         progress.set(p);
@@ -136,3 +137,5 @@
         </div>
     </div>
 </div>
+
+```
