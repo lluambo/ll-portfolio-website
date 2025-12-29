@@ -24,7 +24,7 @@
         ></div>
 
         <h1
-            class="text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600 mb-4 drop-shadow-[0_0_30px_rgba(168,85,247,0.5)]"
+            class="text-9xl font-black text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-purple-600 mb-4 drop-shadow-[0_0_30px_rgba(168,85,247,0.5)]"
         >
             404
         </h1>

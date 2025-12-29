@@ -69,7 +69,7 @@
                 class="text-5xl md:text-7xl font-black mb-6 text-white drop-shadow-2xl"
             >
                 Get in <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400"
+                    class="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-400"
                     >Touch</span
                 >
             </h1>
