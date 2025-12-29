@@ -55,18 +55,25 @@
     <main
         class="container mx-auto px-4 pt-32 pb-20 flex flex-col items-center justify-center min-h-[85vh]"
     >
-        <div class="text-center mb-12">
+        <div
+            class="text-center mb-12
+                           bg-black/60 md:bg-transparent
+                           backdrop-blur-md md:backdrop-blur-none
+                           p-8 md:p-0
+                           rounded-3xl md:rounded-none
+                           border border-white/10 md:border-none
+                           shadow-2xl md:shadow-none
+                           max-w-xl mx-auto"
+        >
             <h1
                 class="text-5xl md:text-7xl font-black mb-6 text-white drop-shadow-2xl"
             >
                 Get in <span
-                    class="text-transparent bg-clip-text bg-linear-to-r from-cyan-300 to-purple-400"
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400"
                     >Touch</span
                 >
             </h1>
-            <p
-                class="text-lg md:text-xl text-gray-300 max-w-xl mx-auto leading-relaxed"
-            >
+            <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
                 Have a project in mind or just want to say hi? <br
                     class="hidden md:block"
                 />
