@@ -117,7 +117,7 @@
                 <img
                     src={Pic}
                     alt="Developer Portrait"
-                    class="relative z-10 w-full max-w-md object-contain mask mask-squircle lg:mask-none drop-shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:scale-105 transition-transform duration-500"
+                    class="relative z-10 w-full max-w-md object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.15)] hover:scale-105 transition-transform duration-500 rounded-2xl"
                 />
             </div>
         </div>
