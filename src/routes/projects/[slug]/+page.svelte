@@ -4,67 +4,50 @@
     import PersonalPortfolio from "$lib/assets/projects/personal-portfolio.png";
     import { page } from "$app/state";
 
-    // Helper to get slug from URL
     const slug = $derived(page.params.slug);
 
     const allProjects = {
         "Personal-Portfolio": {
             name: "Personal Portfolio",
-            tag: "Svelte, SvelteKit and Tailwind CSS",
+
+            tags: ["Svelte", "SvelteKit", "Tailwind CSS"],
             img: PersonalPortfolio,
             desc: "A personal portfolio website built with SvelteKit and Tailwind CSS.",
             content: `
-                <p class="mb-6 leading-relaxed">
-                    I built this site to be more than just a digital resume—it's a playground where I can experiment with Svelte.
-                    My goal was to create something that <strong>works</strong> and has my own personal touch, rather than just a static list of skills.
-                    It was also the perfect excuse to start learning <strong>Svelte 5</strong> and its ecosystem.
-                </p>
+				<p class="mb-6 leading-relaxed">
+					I built this site to be more than just a digital resume—it's a playground where I can experiment with Svelte.
+					My goal was to create something that <strong>works</strong> and has my own personal touch, rather than just a static list of skills.
+					It was also the perfect excuse to start learning <strong>Svelte 5</strong> and its ecosystem.
+				</p>
 
-                <h3 class="text-2xl font-bold text-white mb-4 mt-8">What makes it special?</h3>
-                <ul class="list-disc list-inside space-y-4 text-gray-300 mb-8">
-                    <li>
-                        <strong class="text-cyan-400">A Background that Moves with You:</strong>
-                        I didn't want a simple background. Because of this I spent a long while getting <span class="text-white">Vanta.js</span> and <span class="text-white">Three.js</span> to create a 3D net effect that actually reacts to your mouse movement. It gives the site a personal touch and is something to look forward to in my next projects.
-                    </li>
-                    <li>
-                        <strong class="text-cyan-400">New and Improved Svelte5</strong>
-                        Svelte 5 just recently released so I decided to build this entirely on <span class="text-white">Svelte 5</span> after a recomendation from a friend and to get into the new tech running. At first I was going to use react or simple javascipt but Svelte just felt right. It was a learning curve coming, but the result is a website that feels incredibly snappy and lightweight.
-                    </li>
-                    <li>
-                        <strong class="text-cyan-400">Creative Problem Solving:</strong>
-                        I needed a contact form but didn't want to pay for a backend server. My solution? I found a way to use Google Forms to act as my API. This was my first deep dive into Svlete and I wanted somtehing simple. Now, messages are sent directly to my personal Google Sheets for free.
-                    </li>
-                </ul>
+				<h3 class="text-2xl font-bold text-white mb-4 mt-8">What makes it special?</h3>
+				<ul class="list-disc list-inside space-y-4 text-gray-300 mb-8">
+					<li>
+						<strong class="text-cyan-400">A Background that Moves with You:</strong>
+						I didn't want a simple background. Because of this I spent a long while getting <span class="text-white">Vanta.js</span> and <span class="text-white">Three.js</span> to create a 3D net effect that actually reacts to your mouse movement. It gives the site a personal touch and is something to look forward to in my next projects.
+					</li>
+					<li>
+						<strong class="text-cyan-400">New and Improved Svelte5</strong>
+						Svelte 5 just recently released so I decided to build this entirely on <span class="text-white">Svelte 5</span> after a recomendation from a friend and to get into the new tech running. At first I was going to use react or simple javascipt but Svelte just felt right. It was a learning curve coming, but the result is a website that feels incredibly snappy and lightweight.
+					</li>
+					<li>
+						<strong class="text-cyan-400">Creative Problem Solving:</strong>
+						I needed a contact form but didn't want to pay for a backend server. My solution? I found a way to use Google Forms to act as my API. This was my first deep dive into Svlete and I wanted somtehing simple. Now, messages are sent directly to my personal Google Sheets for free.
+					</li>
+				</ul>
 
-                <h3 class="text-2xl font-bold text-white mb-4">Why <strong>Svelte?</strong></h3>
-                <p class="leading-relaxed">
-                    I chose Svelte 5 because I wanted something that works and is fun to work with. The code is cleaner, the bundle size is smaller, and honestly, it’s just really fun to write compared to other frameworks.
-                </p>
-            `,
+				<h3 class="text-2xl font-bold text-white mb-4">Why <strong>Svelte?</strong></h3>
+				<p class="leading-relaxed">
+					I chose Svelte 5 because I wanted something that works and is fun to work with. The code is cleaner, the bundle size is smaller, and honestly, it’s just really fun to write compared to other frameworks.
+				</p>
+			`,
         },
-        /* , // Note: When you add more projects, put a comma after the closing bracket above: },
-        "beta-app": {
-            name: "Beta App",
-            tag: "Mobile",
-            img: "https://picsum.photos/800/400?random=2",
-            desc: "React Native fitness tracking application.",
-            content: `<p>A cross-platform mobile app designed to help users track their fitness goals using device sensors.</p>`,
-        },
-        "gamma-dash": {
-            name: "Gamma Dash",
-            tag: "Dashboard",
-            img: "https://picsum.photos/800/400?random=3",
-            desc: "Real-time crypto analytics platform.",
-            content: `<p>High-frequency data visualization using D3.js and WebSockets to track market movements in real-time.</p>`,
-        }
-        */
     };
 
-    // Fallback if project isn't found
     let project = $derived(
         allProjects[slug as keyof typeof allProjects] || {
             name: "Project Not Found",
-            tag: "Error",
+            tags: ["Error"],
             img: "",
             desc: "This project does not exist.",
             content: "<p>Please go back and select a valid project.</p>",
@@ -93,12 +76,19 @@
                 ← Back to Projects
             </a>
 
-            <div class="mb-10">
-                <div
-                    class="badge badge-lg badge-outline text-cyan-300 border-cyan-500/50 mb-4 shadow-[0_0_10px_rgba(34,211,238,0.3)]"
-                >
-                    {project.tag}
+            <div
+                class="mb-12 bg-black/60 backdrop-blur-md p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl"
+            >
+                <div class="flex flex-wrap gap-3 mb-6">
+                    {#each project.tags as tag}
+                        <span
+                            class="badge badge-lg badge-outline text-purple-300 border-purple-500/50 shadow-[0_0_10px_rgba(168,85,247,0.3)]"
+                        >
+                            {tag}
+                        </span>
+                    {/each}
                 </div>
+
                 <h1
                     class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight drop-shadow-lg"
                 >
@@ -128,7 +118,7 @@
                     </div>
                 {/if}
                 <div
-                    class="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"
+                    class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
                 ></div>
             </figure>
 
@@ -137,12 +127,12 @@
             >
                 <div
                     class="prose prose-lg max-w-none
-                    prose-headings:text-white prose-headings:font-bold
-                    prose-p:text-gray-300 prose-p:leading-relaxed
-                    prose-li:text-gray-300
-                    prose-strong:text-cyan-300
-                    prose-a:text-cyan-400 hover:prose-a:text-cyan-300
-                    prose-blockquote:text-gray-400 prose-blockquote:border-l-cyan-500"
+					prose-headings:text-white prose-headings:font-bold
+					prose-p:text-gray-300 prose-p:leading-relaxed
+					prose-li:text-gray-300
+					prose-strong:text-cyan-300
+					prose-a:text-cyan-400 hover:prose-a:text-cyan-300
+					prose-blockquote:text-gray-400 prose-blockquote:border-l-cyan-500"
                 >
                     {@html project.content}
                 </div>

@@ -52,38 +52,38 @@
                 <div class="grid md:grid-cols-3 gap-12">
                     <div class="md:col-span-2 space-y-6">
                         <h2 class="text-2xl font-bold text-white mb-4">
-                            A bit about Journey
+                            A bit about my journey
                         </h2>
                         <div
                             class="prose prose-lg prose-p:text-gray-300 prose-strong:text-cyan-300 max-w-none"
                         >
                             <p>
-                                I have always been a person who like to solve
-                                problems, at first that was with simple python
-                                scripts, but as I continued working more and
-                                more on simple projects, I though why not try
-                                make them available to the world, and the
-                                simplest way was through the web. To be honest
-                                back in the day I learnt php and html to make
-                                simple websites but I hated the experience, so I
-                                ditched web development for a while, until in
-                                2025 when I decided to give it another chance
-                                cause of a random idea I had for a
-                                project(coming soon) and that's when I
-                                discovered Svelte and SvelteKit as i was
-                                learning javaScript and TypeScript, and from
-                                there I was hooked.
+                                I have always been a person who likes to solve
+                                problems; at first that was with simple Python
+                                scripts, but as I continued working increasingly
+                                on simple projects, I thought, "Why not try to
+                                make them available to the world?" and the
+                                simplest way was through the web. To be honest,
+                                back in the day I learned PHP and HTML to make
+                                simple websites, but I hated the experience, so
+                                I ditched web development for a while, until
+                                2025, when I decided to give it another chance
+                                because of a random idea I had for a project
+                                (coming soon), and that's when I discovered
+                                Svelte and SvelteKit as I was learning
+                                JavaScript and TypeScript, and from there I was
+                                hooked.
                             </p>
                             <p>
                                 For me the most important thing about a language
-                                or framework is that it makes sense to me and
+                                or framework is that it makes sense to me, and
                                 Svelte does just that. Does a lot of the things
-                                behind the scenes making development a breeze
-                                and fun. Big shoutout to one of my friends
-                                Benin,you can check out his work <a
+                                behind the scenes, making development a breeze
+                                and fun. Big shoutout to one of my friends,
+                                Benin, whose work you can check out <a
                                     href="https://frstudios.co.ke/BeninMukabanah"
                                     class="text-cyan-400 underline hover:text-cyan-300"
-                                    >here</a
+                                    >here,</a
                                 > who introduced me to SvelteKit.
                             </p>
                             <p>
@@ -105,15 +105,15 @@
                                 class="prose prose-lg prose-p:text-gray-300 prose-strong:text-cyan-300 max-w-none"
                             >
                                 <p>
-                                    Next steps is what I can do to make websites
-                                    look even better with <strong
+                                    he next step is what I can do to make
+                                    websites look even better with <strong
                                         >Svelte 5</strong
-                                    > so stay tuned and come visit the webstie from
-                                    time to time to see what im upto. I also have
+                                    > so stay tuned and come visit the website from
+                                    time to time to see what I'm up to. I also have
                                     my resume downloadable below if you want to see
                                     my experience and skills in detail. Always happy
-                                    to connect so feel free to reach out, my linkedin
-                                    and github are linked in the footer.
+                                    to connect, so feel free to reach out; my LinkedIn
+                                    and GitHub are linked in the footer.
                                 </p>
                             </div>
 
