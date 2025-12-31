@@ -58,39 +58,39 @@
                             class="prose prose-lg prose-p:text-gray-300 prose-strong:text-cyan-300 max-w-none"
                         >
                             <p>
-                                I have always been a person who likes to solve
-                                problems; at first that was with simple Python
-                                scripts, but as I continued working increasingly
-                                on simple projects, I thought, "Why not try to
-                                make them available to the world?" and the
-                                simplest way was through the web. To be honest,
-                                back in the day I learned PHP and HTML to make
-                                simple websites, but I hated the experience, so
-                                I ditched web development for a while, until
-                                2025, when I decided to give it another chance
-                                because of a random idea I had for a project
-                                (coming soon), and that's when I discovered
-                                Svelte and SvelteKit as I was learning
-                                JavaScript and TypeScript, and from there I was
-                                hooked.
+                                I have always been a problem solver. It started
+                                with simple Python scripts, but as I took on
+                                more complex projects, I thought, "Why not share
+                                them with the world?" The web was the simplest
+                                way to do that. To be honest, I learned PHP and
+                                HTML years ago to make basic websites, but I
+                                didn't enjoy the experience, so I stepped away
+                                from web development for a while.
                             </p>
                             <p>
-                                For me the most important thing about a language
-                                or framework is that it makes sense to me, and
-                                Svelte does just that. Does a lot of the things
-                                behind the scenes, making development a breeze
-                                and fun. Big shoutout to one of my friends,
-                                Benin, whose work you can check out <a
+                                Fast forward to 2025: I decided to give it
+                                another chance because of a random project idea
+                                (coming soon). While relearning JavaScript and
+                                TypeScript, I discovered Svelte and
+                                SvelteKit—and I was hooked immediately.
+                            </p>
+                            <p>
+                                For me, the most important thing about a
+                                language or framework is intuitiveness, and
+                                Svelte delivers exactly that. It handles so much
+                                behind the scenes, making development a breeze.
+                                A big shoutout to my friend Benin (check out his
+                                work <a
                                     href="https://frstudios.co.ke/BeninMukabanah"
                                     class="text-cyan-400 underline hover:text-cyan-300"
-                                    >here,</a
-                                > who introduced me to SvelteKit.
+                                    >here</a
+                                >), who introduced me to SvelteKit.
                             </p>
                             <p>
-                                Currently, I am focusing deeply on the <strong
+                                Currently, I am focusing deeply on <strong
                                     >Svelte 5</strong
-                                > making things that fix problems and look amazing
-                                as they fix them.
+                                >, building applications that not only solve
+                                problems but look amazing doing it.
                             </p>
                         </div>
                         <div class="md:col-span-2 space-y-6">
@@ -105,15 +105,16 @@
                                 class="prose prose-lg prose-p:text-gray-300 prose-strong:text-cyan-300 max-w-none"
                             >
                                 <p>
-                                    he next step is what I can do to make
-                                    websites look even better with <strong
+                                    The next step is pushing the boundaries of
+                                    what I can create with <strong
                                         >Svelte 5</strong
-                                    > so stay tuned and come visit the website from
-                                    time to time to see what I'm up to. I also have
-                                    my resume downloadable below if you want to see
-                                    my experience and skills in detail. Always happy
-                                    to connect, so feel free to reach out; my LinkedIn
-                                    and GitHub are linked in the footer.
+                                    >, so stay tuned and visit the website from
+                                    time to time to see what I'm up to. You can
+                                    download my resume below to see my
+                                    experience and skills in detail. I'm always
+                                    happy to connect, so feel free to reach out;
+                                    my LinkedIn and GitHub are linked in the
+                                    footer.
                                 </p>
                             </div>
 
